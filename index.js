@@ -24,7 +24,7 @@ app.post('/api/shorturl', (req, res) => {
     
     const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
     if (!urlRegex.test(url)) {
-        return res.status(400).json({ error: 'Invalid URL format' });
+        return res.status(400).json({ error: 'invalid url' });
     }
     
     const shortUrl = Object.keys(Url).length + 1;
